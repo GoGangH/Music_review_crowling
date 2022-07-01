@@ -1,4 +1,5 @@
 import requests
+import urllib
 from bs4 import BeautifulSoup
 
 def crowling():
@@ -18,9 +19,7 @@ def crowling():
 
     title = soup.find_all(class_='contents4')
     
-    for i in title:
-        print(i.attrs['href'])
-        print()
+    print(title)
 
 def main():
     crowling()
